@@ -7,6 +7,7 @@ import { createContext } from "react";
 type UserContextType = {
   userId: number | null
   organizationId: number | null
+  role: 'ADMIN' | 'MANAGER' | 'EMPLOYEE'
 }
 
 export const UserContext = createContext({} as UserContextType)
@@ -23,9 +24,10 @@ export function UserProvider({ children }: UserProviderProps) {
 
   const userId = data?.id ?? null
   const organizationId = data?.organization_id ?? null
+  const role = data?.role ?? null
 
   return (
-    <UserContext.Provider value={{ userId, organizationId }}>
+    <UserContext.Provider value={{ userId, organizationId, role }}>
       {children}
     </UserContext.Provider>
   )

@@ -1,10 +1,10 @@
 import { api } from "../client";
 
-export async function uploadAvatar(userId: number | null, file: FormData) {
-  const result = await api.patch(`/users/${userId}`, file, {
-    headers: {
-      'Content-Type': 'multipart/form-data',
-    },
+export async function uploadAvatar(avatarUrl: string, userId: number | null) {
+  const result = await api.patch(`/users/${userId}`, {
+    user: {
+      predefined_avatar_url: avatarUrl
+    }
   })
 
   return result.data;
