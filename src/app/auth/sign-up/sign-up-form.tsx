@@ -85,7 +85,7 @@ export function SignUpForm() {
 
         <div className="w-full flex flex-col gap-4">
           <Label className="text-zinc-300 font-bold">Confirme a senha</Label>
-          <Input placeholder="Escolha sua senha" type="password" {...register('user.password_confirmation')} />
+          <Input placeholder="Confirme a senha" type="password" {...register('user.password_confirmation')} />
 
           {errors?.user?.password_confirmation && (
             <p className="text-xs font-medium text-red-400">
@@ -147,7 +147,7 @@ export function SignUpForm() {
 
         <div className="w-full flex flex-col gap-4">
           <Label className="text-zinc-300 font-bold">Cidade</Label>
-          <Input placeholder="Digite o Número da residência" {...register('user.address_attributes.city')} />
+          <Input placeholder="Digite a cidade" {...register('user.address_attributes.city')} />
 
           {errors?.user?.address_attributes?.city && (
             <p className="text-xs font-medium text-red-400">

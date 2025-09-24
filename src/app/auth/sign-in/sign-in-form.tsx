@@ -27,20 +27,20 @@ export function SignInForm() {
       <h1 className="text-2xl font-extrabold text-zinc-300">Fazer login</h1>
 
       {success === false && message && (
-          <Alert variant="destructive">
-            <AlertTriangle className="size-4" />
-            <AlertTitle>Erro ao fazer o login!</AlertTitle>
-            <AlertDescription>
-              <p>
-                Os dados de login estão incorretos, por favor, tente novamente.
-              </p>
-            </AlertDescription>
-          </Alert>
-        )}
+        <Alert variant="destructive">
+          <AlertTriangle className="size-4" />
+          <AlertTitle>Erro ao fazer o login!</AlertTitle>
+          <AlertDescription>
+            <p>
+              Os dados de login estão incorretos, por favor, tente novamente.
+            </p>
+          </AlertDescription>
+        </Alert>
+      )}
 
       <div className="w-full flex flex-col gap-4">
         <Label className="text-zinc-300 font-bold">E-mail</Label>
-        <Input placeholder="Digete o seu e-mail" type="email" name="email" />
+        <Input placeholder="Digite o seu e-mail" type="email" name="email" />
 
         {errors?.email && (
           <p className="text-xs font-medium text-red-400">
@@ -66,7 +66,7 @@ export function SignInForm() {
         <a href="/auth/sign-up" className="text-sm text-zinc-400 hover:text-cyan-500 hover:underline">Registrar conta</a>
       </div>
 
-      <Button 
+      <Button
         className="w-full bg-cyan-500 font-bold cursor-pointer hover:bg-cyan-600"
         type="submit"
         disabled={isPending}
@@ -75,11 +75,11 @@ export function SignInForm() {
       </Button>
 
       <div className="absolute bottom-3">
-        <Image 
-          src={lsdrLogo} 
-          alt="Logo do LSDR" 
-          width={100} 
-          height={100} 
+        <Image
+          src={lsdrLogo}
+          alt="Logo do LSDR"
+          width={100}
+          height={100}
           className="opacity-30"
         />
       </div>

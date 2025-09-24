@@ -4,7 +4,7 @@ import { me } from "@/api/users/me";
 import { useQuery } from "@tanstack/react-query";
 import { createContext } from "react";
 
-type UserContextType = {
+export type UserContextType = {
   userId: number | null
   organizationId: number | null
   role: 'ADMIN' | 'MANAGER' | 'EMPLOYEE'
